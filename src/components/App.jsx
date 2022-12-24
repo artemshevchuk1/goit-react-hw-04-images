@@ -1,6 +1,6 @@
 import Searchbar from './SearchBar/Searchbar';
 import ImageGallery from './ImageGallery/ImageGallery';
-import fetchImagesWithQuery from 'services/api';
+import fetchImagesWithQuery from './servies/Api';
 import Modal from './Modal/Modal';
 import Loader from './Loader/Loader';
 import Button from './Button/Button';
