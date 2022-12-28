@@ -16,7 +16,6 @@ export default function App() {
   const [largeImage, setLargeImage] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -40,7 +39,7 @@ export default function App() {
       setError(error);
       setIsLoading(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [page, searchData]);
 
   const onSubmit = newSearchData => {
@@ -73,6 +72,7 @@ export default function App() {
       {images.length !== 0 && (
         <ImageGallery images={images} openModal={openModal} />
       )}
+      {error && <p>{error.message}</p>}
       {showModal && <Modal toggleModal={toggleModal} largeImage={largeImage} />}
       {isLoading && <Loader />}
       <ToastContainer autoClose={2500} />
